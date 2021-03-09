@@ -1,0 +1,109 @@
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.control.DatePicker;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
+import static java.awt.Font.*;
+import static javafx.scene.text.Font.font;
+import javafx.scene.chart.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.Group;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
+import javafx.scene.layout.VBox;
+
+public class lab06 extends Application {
+
+    @Override
+    
+    public void start(Stage primaryStage) throws Exception{
+
+        double[] avgHousingPricesByYear = { 247381.0, 264171.4,287715.3,294736.1, 308431.4,322635.9,340253.0,363153.7};
+        double [] avgCommercialProcesByYear = { 1121585.3,1219479.5,1246354.2,1295364.8, 1335932.6,1472362.0,1583521.9,1613246.3};
+        primaryStage.setTitle("Lab 06");
+        //Scene scene = new Scene(new Group());
+        primaryStage.setWidth(1000);
+        primaryStage.setHeight(1000);
+
+        /*
+        CategoryAxis xAxis    = new CategoryAxis();
+        xAxis.setLabel("idk");
+
+        NumberAxis yAxis = new NumberAxis();
+        yAxis.setLabel("Prices per Year");
+
+        BarChart barChart = new BarChart(xAxis, yAxis);
+
+        XYChart.Series housingData = new XYChart.Series();
+        housingData.setName("Housing");
+
+        housingData.getData().add(new XYChart.Data("1", avgHousingPricesByYear[0]));
+        housingData.getData().add(new XYChart.Data("2"  , avgHousingPricesByYear[1]));
+        housingData.getData().add(new XYChart.Data("3"  , avgHousingPricesByYear[2]));
+        housingData.getData().add(new XYChart.Data("4"  , avgHousingPricesByYear[3]));
+        housingData.getData().add(new XYChart.Data("5"  , avgHousingPricesByYear[4]));
+        housingData.getData().add(new XYChart.Data("6"  , avgHousingPricesByYear[5]));
+        housingData.getData().add(new XYChart.Data("7"  , avgHousingPricesByYear[6]));
+        housingData.getData().add(new XYChart.Data("8"  , avgHousingPricesByYear[7]));
+
+        barChart.getData().add(housingData);
+
+        XYChart.Series commercialData = new XYChart.Series();
+        commercialData.setName("Comercial");
+
+        commercialData.getData().add(new XYChart.Data("1", avgCommercialProcesByYear[0]));
+        commercialData.getData().add(new XYChart.Data("2"  , avgCommercialProcesByYear[1]));
+        commercialData.getData().add(new XYChart.Data("3"  , avgCommercialProcesByYear[2]));
+        commercialData.getData().add(new XYChart.Data("4"  , avgCommercialProcesByYear[3]));
+        commercialData.getData().add(new XYChart.Data("5"  , avgCommercialProcesByYear[4]));
+        commercialData.getData().add(new XYChart.Data("6"  , avgCommercialProcesByYear[5]));
+        commercialData.getData().add(new XYChart.Data("7"  , avgCommercialProcesByYear[6]));
+        commercialData.getData().add(new XYChart.Data("8"  , avgCommercialProcesByYear[7]));
+
+        barChart.getData().add(commercialData);
+
+        VBox vbox = new VBox(barChart);
+
+        Scene scene = new Scene(vbox, 400, 200);
+    */
+    /*
+        ObservableList<PieChart.Data> pieChartData =
+                FXCollections.observableArrayList(
+                new PieChart.Data("Grapefruit", 13),
+                new PieChart.Data("Oranges", 25),
+                new PieChart.Data("Plums", 10),
+                new PieChart.Data("Pears", 22),
+                new PieChart.Data("Apples", 30));
+        final PieChart chart = new PieChart(pieChartData);
+        chart.setTitle("Imported Fruits");
+
+
+        ((Group) scene.getRoot()).getChildren().add(chart);
+        */
+        primaryStage.setScene(scene);
+        primaryStage.setHeight(300);
+        primaryStage.setWidth(1200);
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch();
+    }
+
+}
