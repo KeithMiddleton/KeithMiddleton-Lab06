@@ -137,15 +137,15 @@ public class lab06 extends Application {
 
         double begin = 0.0;
         for (int i = 0; i < purchasesByAgeGroup.length; i++) {
-            double slicePercentage = (double) purchasesByAgeGroup[i] / (double) numGroups;
-            double sweepAngle = slicePercentage * 360.0;
+            double size = (double) purchasesByAgeGroup[i] / (double) numGroups;
+            double piePortion = size * 360.0;
 
             gc.setFill(pieColors[i]);
-            gc.fillArc(1000, 400, 300, 300, begin, sweepAngle, ArcType.ROUND);
+            gc.fillArc(1000, 400, 300, 300, begin, piePortion, ArcType.ROUND);
 
-            begin += sweepAngle;
+            begin += piePortion;
         }
-}
+    }
 
 
     public static void main(String[] args) {
